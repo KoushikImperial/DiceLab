@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiceLab | Roll the Dice</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">🎲 DiceLab</a>
+        <span class="tagline">YOUR LUCK, YOUR GAME.</span>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <p class="eyebrow">THE CLASSIC, REIMAGINED</p>
+            <h1>Leave it to <span>chance.</span></h1>
+            <p class="subtitle">
+                One roll can change everything. Give the dice a throw!
+            </p>
+        </section>
+
+        <section class="dice-card">
+            <div class="card-top">
+                <span class="status-dot"></span>
+                <span>READY TO ROLL</span>
+                <span class="roll-count" id="rollCount">0 rolls</span>
+            </div>
+
+            <div class="dice-area" id="diceArea">
+                <div class="die" id="die1" aria-label="Die 1">1</div>
+                <div class="die hidden" id="die2" aria-label="Die 2">1</div>
+            </div>
+
+            <div class="result">
+                <p id="resultLabel">YOUR RESULT</p>
+                <h2 id="total">—</h2>
+                <p id="resultMessage">Ready when you are.</p>
+            </div>
+
+            <div class="controls">
+                <button class="roll-button" id="rollOne">
+                    Roll one die <span>↗</span>
+                </button>
+                <button class="roll-button secondary" id="rollTwo">
+                    Roll two dice <span>🎲</span>
+                </button>
+            </div>
+
+            <p class="hint">Each die has six equally likely outcomes.</p>
+        </section>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <p>TOTAL ROLLS</p>
+                <h3 id="statRolls">0</h3>
+            </div>
+            <div class="stat-card">
+                <p>AVERAGE TOTAL</p>
+                <h3 id="statAverage">—</h3>
+            </div>
+            <div class="stat-card">
+                <p>HIGHEST TOTAL</p>
+                <h3 id="statHighest">—</h3>
+            </div>
+        </section>
+
+        <section class="history-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">YOUR SESSION</p>
+                    <h2>Roll history</h2>
+                </div>
+                <button class="clear-button" id="clearHistory">Clear history</button>
+            </div>
+
+            <div id="historyList" class="history-list">
+                <p class="empty-state">No rolls yet. Make your first move!</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Built with curiosity & code.</p>
+            <p>DiceLab © 2026</p>
+        </footer>
+
+    </main>
+</body>
+</html>
